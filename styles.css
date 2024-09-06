@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #123d48;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+.container {
+    text-align: center;
+    width: 90vw; 
+    height: 70vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+    box-sizing: border-box; 
+    
+}
+
+.Modalidade {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    width: 100%; 
+    height: 100%; 
+    
+}
+
+.modalidade {
+    border-radius: 8px;
+    text-align: center;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px; 
+    flex-direction: column;
+    position: relative; 
+    padding-bottom: 30px; 
+    color: white; 
+}
+
+.modalidade::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 0 0 8px 8px; 
+    z-index: 1; 
+}
+
+.modalidade::before {
+    content: attr(data-name); 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; 
+    font-size: 16px; 
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
+    z-index: 2; 
+}
+
+.modalidade:hover {
+    background-color: #444;
+    transform: translateY(-10px); 
+}
+
+
+#futebol {background-color: #14a28a; --name: "Futebol";}
+#futebol:hover {background-color: #37e0d8;}
+
+#volei {background-color: #0c5e79; --name: "Vôlei";}
+#volei:hover{background-color: #0e93b5;}
+
+#basquete {background-color: #390f59; --name: "Basquete";}
+#basquete:hover{background-color: #95119e;}
+
+#lutas {background-color:#a21313; --name: "Lutas";}
+#lutas:hover{background-color:#e41111;}
+
+#atletismo {background-color: #a12f1b; --name: "Atletismo";}
+#atletismo:hover{background-color: #dc4429;}
+
+#skate {background-color: #97215c; --name: "Skate";}
+#skate:hover{background-color: #f32f91;}
+
+#tenis {background-color: #917f08; --name: "Tênis";}
+#tenis:hover{background-color:#ccb51d;}
+
+#handebol {background-color:#592320; --name: "Handebol";}
+#handebol:hover{background-color:#93332c;}
+
+#ginasticas {background-color: #326110; --name: "Ginásticas";}
+#ginasticas:hover{background-color:  #3d8709;}
+
+#surf {background-color: #0d0d66; --name: "Surf";}
+#surf:hover{background-color: #0000FF;}
+
+#futevolei {background-color: #723b13; --name: "Futevôlei";}
+#futevolei:hover{background-color: #e2701f;}
+
+#outros {background-color: #2d2a2a; --name: "Outros";}
+#outros:hover{background-color:#5a5656;}
